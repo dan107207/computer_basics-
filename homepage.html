@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Computer Basic knowledge</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    body {
+      background-image: url(combks.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: #1f2933;
+      line-height: 1.6;
+    }
+    .h1 {
+      color: #f3f4f6;
+    }
+    .h2 {
+      color: aliceblue;
+    }
+
+    /* NAVBAR */
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 16px;
+      background: rgba(2,6,23,0.85);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    nav::-webkit-scrollbar {
+      display: none;
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 18px;
+      color: #60a5fa;
+      flex-shrink: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #e5e7eb;
+      font-size: 14px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      transition: 0.25s;
+      flex-shrink: 0;
+    }
+
+    nav a:hover {
+      background: #2563eb;
+      color: #ffffff;
+    }
+    /* HERO */
+    .hero {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      background-image: url(combks.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .hero-text h1 {
+      font-size: 40px;
+      margin-bottom: 16px;
+    }
+
+    .hero-text p {
+      font-size: 17px;
+      color: #4b5563;
+      margin-bottom: 28px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .hero-buttons button {
+      padding: 12px 24px;
+      font-size: 15px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: #2563eb;
+      color: #ffffff;
+    }
+
+    .btn-secondary {
+      background: #eef2ff;
+      color: #2563eb;
+    }
+
+    .hero-buttons button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    /* IMAGE PLACEHOLDER */
+    .hero-image {
+      width: 100%;
+      min-height: 240px;
+      border-radius: 16px;
+      background: #f3f4f6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #6b7280;
+      padding: 0px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      font-size: 15px;
+      background-image: url(comptkids.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #f9fafb;
+      padding: 50px 20px;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .footer-container {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+    }
+
+    footer h3 {
+      color: #2563eb;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    footer p {
+      font-size: 14px;
+      color: #4b5563;
+    }
+
+    .copyright {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 13px;
+      color: #6b7280;
+    }
+
+    /* MOBILE OPTIMIZATION */
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 40px 16px;
+      }
+
+      .hero-text h1 {
+        font-size: 30px;
+      }
+
+      .hero-text p {
+        font-size: 16px;
+      }
+
+      .hero-buttons button {
+        width: 100%;
+      }
+
+     
+
+      }
+    
+    .img1 {
+     margin: 0;
+     width: 100;
+    }
+  </style>
+</head>
+<body>
+
+ 
+  <nav>
+    <div class="logo">Computer Basics</div>
+    <a href="homepage.html">Home</a>
+    <a href="topics.html">Topics</a>
+    <a href="about.html">About</a>
+    <a href="story.html">Story</a>
+    
+  </nav>
+
+  
+  <section class="hero">
+    <div class="hero-text">
+      <h1 class="h1">Learn Computer Skills Without the Stress🤓💻 With Mr.Mutyaba</h1>
+      <p style="color: white;">
+        A beginner-friendly platform that teaches some computers basics that you need to know as time goes on because the world is evolviing so better catch up🤨,
+        step by step — perfect on phone or computer.
+      </p>
+
+      <div class="hero-buttons">
+        <button class="btn-primary" onclick="goTo('topics.html')">
+          Explore Topics🧐
+        </button>
+        <button class="btn-secondary" onclick="goTo('about.html')">
+          Who Owns This Site?🤷‍♂️
+        </button>
+      </div>
+    </div>
+
+    
+    <div class="hero-image">
+      
+    </div>
+  </section>
+
+
+  <footer>
+    <div class="footer-container">
+      <div>
+        <h3>Computer Basics</h3>
+        <p>
+          Simple, friendly computer education for everyone interrested in the computer related fields—
+          no experience needed just time🕓 and knowledge🙂.
+        </p>
+      </div>
+
+      <div>
+        <h3>Guide</h3>
+        <p>
+          Pick a topic → Learn → revise →
+          Build real confidence to a point that you can answer any interview.
+        </p>
+      </div>
+
+      <div>
+        <h3>Our Vision</h3>
+        <p>
+          Making computer knowledge accessible to any viewer so that we develop together and understand how and why computer wasnt a mistake in our lives. 
+        </p>
+      </div>
+    </div>
+
+    <div class="copyright">
+      © 2025/2026 Computer Basics • Mobile & Desktop Ready website designed by <u><a href="https://modest-tomato-srtmrt.mystrikingly.com/" style="color: #2563eb;">MR.MUTYABA DANIEL</a></u>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    function goTo(page) {
+      window.location.href = page;
+    }
+  </script>
+
+</body>
+</html>

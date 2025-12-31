@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Topics | Computer Basics</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    body {
+      background: #ffffff;
+      color: #1f2933;
+    }
+
+    /* NAVBAR */
+    nav {
+      background: #040404;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    nav::-webkit-scrollbar {
+      display: none;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 800;
+      color: #2563eb;
+      flex-shrink: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #eaf0f5;
+      font-size: 14px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      transition: 0.25s;
+      flex-shrink: 0;
+    }
+
+    nav a:hover {
+      background: #2563eb;
+      color: #ffffff;
+    }
+
+    /* PAGE TITLE */
+    .page-title {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    .page-title h1 {
+      font-size: 34px;
+      margin-bottom: 8px;
+    }
+
+    .page-title p {
+      color: #4b5563;
+      font-size: 15px;
+    }
+
+    /* VERTICAL TOPICS LIST */
+    .topics {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px 20px 60px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      
+    }
+
+    /* TOPIC TILE */
+    .topic-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+    }
+
+    .topic-header {
+      background: #f9fafb;
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+
+    .topic-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .topic-image {
+      width: 46px;
+      height: 46px;
+      background: #e5e7eb;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+
+    .topic-header h3 {
+      font-size: 17px;
+    }
+
+    .dropdown {
+      font-size: 20px;
+      transition: transform 0.3s;
+    }
+
+    .topic-content {
+      display: none;
+      padding: 18px 22px;
+     
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .topic-content p {
+      font-size: 14px;
+      color: #4b5563;
+      margin-bottom: 12px;
+    }
+
+    .topic-content ul {
+      padding-left: 18px;
+    }
+
+    .topic-content ul li {
+      font-size: 14px;
+      margin-bottom: 6px;
+      
+    }
+
+    .topic-card.active .topic-content {
+      display: block;
+    }
+
+    .topic-card.active .dropdown {
+      transform: rotate(180deg);
+    }
+
+    /* FOOTER */
+    footer {
+      background: #f9fafb;
+      border-top: 1px solid #e5e7eb;
+      padding: 40px 20px;
+    }
+
+    .footer-content {
+      max-width: 900px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      text-align: center;
+    }
+
+    footer h4 {
+      color: #2563eb;
+      margin-bottom: 6px;
+    }
+
+    footer p {
+      font-size: 14px;
+      color: #4b5563;
+    }
+
+    .copyright {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #6b7280;
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+      .profile {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .profile h1 {
+        font-size: 28px;
+      }
+      .topic {
+        
+      padding: 18px 22px;
+      background-image: url(combks.jpg);
+      border-top: 1px solid #074acf;
+      color: #eef5ecf5;
+      border-radius: 100px;
+      text-align: center;
+      font-size: 21px;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+      }
+      Z {
+       background-color: #1d1d1a98;
+       font-size: 10;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">Computer Basics</div>
+    <a href="homepage.html">Home</a>
+    <a href="topics.html">Topics</a>
+    <a href="about.html">About</a>
+    <a href="story.html">Story</a>
+    
+  </nav>
+
+  <!-- TITLE -->
+  <section class="page-title">
+    <H5>WELCOME TO</H5>
+    <h1>COMPUTER BASICS PAGE</h1>
+    <p>Tap a topic to expand and read the content</p>
+  </section>
+
+  <div class="topic"><Z>WHAT IS A COMPUTER?</Z></div>
+
+  <!-- VERTICAL TOPICS -->
+  <section class="topics">
+
+    <div class="topic-card">
+      <div class="topic-header" onclick="toggleTopic(this)">
+        <div class="topic-left">
+          <div class="topic-image">🖥️</div>
+          <h3>Definition</h3>
+        </div>
+        <div class="dropdown">⌄</div>
+      </div>
+      <div class="topic-content">
+        <p>This topic introduces what a computer is in one simple paragraph.</p>
+        <ul>
+          A computer is a programmable electronic system that accepts raw data as input, processes it using a set of logical and mathematical instructions through its central processing unit, temporarily stores active data in memory, permanently stores information in secondary storage, and produces meaningful output, all while operating on binary logic (1s and 0s) under the control of system software such as an operating system, enabling it to perform complex tasks with speed, accuracy, and consistency across applications ranging from simple calculations to advanced computing systems like networks, artificial intelligence, and data processing.
+
+        </ul>
+      </div>
+    </div>
+    <div class="topic-card">
+      <div class="topic-header" onclick="toggleTopic(this)">
+        <div class="topic-left">
+          <div class="topic-image">🖥️</div>
+          <h3>Computer history </h3>
+        </div>
+        <div class="dropdown">⌄</div>
+      </div>
+      <div class="topic-content">
+        <p>This topic introduces very summarized history about computer eveolution and starting</p>
+        <ul>
+         <p> <li><h3>Early Ideas & Mechanical Computing</h3></li></p>
+            The story of computers starts long before electricity, with humans creating tools to 
+            
+            help with calculations. Early devices like the abacus were used thousands of years ago for basic arithmetic. In the 1600s, machines such as Blaise Pascal’s Pascaline and Gottfried Wilhelm Leibniz’s calculator could perform mechanical calculations, proving that machines could assist human thinking, even if they were limited and slow.</p>
+            </li>
+          <p><li><h3>The First Computer Concept</h3></li>
+          In the 19th century, Charles Babbage introduced the idea that truly changed everything. In 1837, he designed the Analytical Engine, considered the first concept of a general-purpose computer. It included core ideas still used today—input, processing, memory, and output—and was programmable using punched cards. Although it was never fully built, it laid the foundation for modern computing. Ada Lovelace, who worked with Babbage, is recognized as the world’s first computer programmer.</p>
+          </li>
+          <p><li><h3>Birth of Electronic Computers</h3></li>
+          The next major leap came in the 1930s and 1940s with electronic machines. Konrad Zuse’s Z3 (1941) became the first programmable digital computer, while ENIAC (1945), developed by John Mauchly and J. Presper Eckert, was the first large-scale electronic computer. These machines used vacuum tubes, were extremely large, consumed massive power, and filled entire rooms—but they proved electronic computing was possible.</p>
+           <p><li>From Vacuum Tubes to Transistors</li>
+            Early computers were powerful but unreliable and expensive. This changed in the 1950s with the invention of the transistor, which replaced vacuum tubes. Transistors were smaller, faster, more reliable, and used less power. This marked the second generation of computers, allowing machines to become more efficient and accessible to governments, universities, and large organizations.
+          </p>
+          <p><li>Integrated Circuits & Smaller Computers</li>
+            In the 1960s, integrated circuits (ICs) combined multiple transistors onto a single chip, launching the third generation of computers. Computers became smaller, cheaper, and more powerful, and operating systems started to appear. This era introduced better programming languages and multitasking systems, making computers more practical for business and scientific use.
+
+          </p>
+          <p><li>Personal Computers Revolution</li>
+            The 1970s and 1980s changed everything with the invention of the microprocessor, which put an entire CPU on one chip. This led to personal computers (PCs) like the Apple II, IBM PC, and later Microsoft-powered machines. Computers moved from labs and offices into homes and 
+
+            schools, becoming tools for writing, learning, gaming, and productivity.
+          </p>
+          <p><li>Modern Computers & the Digital Age          </li>
+            Today’s computers are faster, smaller, and smarter than ever. Smartphones, laptops, tablets, cloud computing, and artificial intelligence all evolved from the early ideas of mechanical and electronic machines. Modern computers now process billions of calculations per second, connect globally through the internet, and power nearly every aspect of modern life—from education and finance to entertainment and communication.
+
+          </p>
+        </ul>
+      </div>
+    </div>
+    <div class="topic-card">
+      <div class="topic-header" onclick="toggleTopic(this)">
+        <div class="topic-left">
+          <div class="topic-image">🖥️</div>
+          <h3>Importances  </h3>
+        </div>
+        <div class="dropdown">⌄</div>
+      </div>
+      <div class="topic-content">
+        <p>This topic introduces you to the importance of this machines</p>
+        <ul>
+          <li>Education and Learning
+            Computers are used in schools, colleges, and at home for studying, doing research, online classes, and accessing digital books and learning platforms.
+            </li>
+          <li>Communication
+            People use computers to send emails, chat, make video calls, and share information instantly across the world.</li>
+          <li>UInternet Browsing and Research
+            Computers help users search for information, read news, watch tutorials, and find answers using websites and search engines.</li>
+            <li> Office Work and Documentation
+              Offices use computers to type documents, create reports, manage files, and prepare presentations.
+              </li>
+            <li>Data Storage and Management
+              Computers store large amounts of data such as documents, photos, videos, and records safely and efficiently.
+              </li>
+            <li> Business and Accounting
+              Businesses use computers for billing, payroll, inventory management, and tracking profits and expenses.
+              </li>
+              <li> Graphic Design and Creativity
+                Designers use computers to create logos, posters, videos, animations, and digital art.</li>
+                <li> Programming and Software Development
+                  Computers are used to write code, build applications, websites, and software systems.
+                  </li>
+                  <li> Engineering and Design
+                    Engineers use computers to design buildings, machines, and circuits using special software.</li>
+                    <li>Remote Work and Freelancing
+                      Computers allow people to work from home, attend virtual meetings, and earn money online.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="topic-card">
+      <div class="topic-header" onclick="toggleTopic(this)">
+        <div class="topic-left">
+          <div class="topic-image">🖥️</div>
+          <h3>Related careers</h3>
+        </div>
+        <div class="dropdown">⌄</div>
+      </div>
+      <div class="topic-content">
+        <p>This topic introduces you to the job careers that you may require computer knowledge</p>
+        <ul>
+          <li>1. Software Developer / Programmer
+            2. Web Developer.
+            
+            
+            
+            3. Mobile App Developer.
+            4. Data Analyst.
+            5. Data Scientist.
+            6. Cybersecurity Specialist.
+            7. Network Administrator.
+            8. System Administrator.
+            9. IT Support Technician.
+            10. Cloud Engineer.
+            11. UI/UX Designer.
+            12. Graphic Designer.
+            13. Digital Marketer.
+            14. Game Developer.
+            15. AI / Machine Learning Engineer.
+            16. Database Administrator.
+            17. DevOps Engineer.
+            18. Computer Teacher / Trainer.
+            20. Tech Entrepreneur. etc</li>
+          
+        </ul>
+      </div>
+    </div>
+
+    <div class="topic"><Z>HARDWARE?</Z></div>
+
+    <div class="topic-card">
+      <div class="topic-header" onclick="toggleTopic(this)">
+        <div class="topic-left">
+          <div class="topic-image">🖥️</div>
+          <h3>Keyboard basics</h3>
+        </div>
+        <div class="dropdown">⌄</div>
+      </div>
+      <div class="topic-content">
+        <p>This topic introduces to you how a keyboard works.</p>
+        <ul>
+          <li>A keyboard works by detecting which key a user presses and sending that information to the computer as a signal it can understand. Under each key on a keyboard is a small switch (usually a rubber dome or mechanical switch). When a key is pressed, the switch closes an electrical circuit, allowing a tiny current to flow. This action is detected by a keyboard controller inside the keyboard, 
+
+            which identifies the specific key based on its position in a key matrix (rows and columns of circuits). The controller then converts the key press into a scan code, which is sent to the computer through a USB or wireless connection. The computer’s operating system interprets this scan code and translates it into a character, command, or action, such as typing a letter, deleting text, or opening a shortcut.
+            </li>
+          
+        </ul>
+      </div>
+    </div>
+    <div class="topic-card">
+      <div class="topic-header" onclick="toggleTopic(this)">
+        <div class="topic-left">
+          <div class="topic-image">🖥️</div>
+          <h3>Touch screen basics</h3>
+        </div>
+        <div class="dropdown">⌄</div>
+      </div>
+      <div class="topic-content">
+        <p>This topic introduces what a computer is and how it works.</p>
+        <ul>
+          <li>A touch screen works by detecting where and how a user touches the screen and then sending that information to the device’s processor. Most modern touch screens use capacitive technology, where a thin layer of conductive material covers the display. The human finger carries a small electrical charge, and when it 
+
+            touches the screen, it changes the electrical field at that exact point. Sensors in the screen detect this change and calculate the touch position. The device’s controller then sends the coordinates to the operating system, which responds by opening an app, scrolling, zooming, or performing another action. Older or cheaper devices may use resistive touch screens, which work by pressing two thin layers together to register a touch, allowing use with a finger, stylus, or gloves. This technology is why touch screens can respond instantly to taps, swipes, and multi-touch gestures.
+            </li>
+          
+        </ul>
+      </div>
+    </div>
+     
+    <div class="topic-card">
+      <div class="topic-header" onclick="toggleTopic(this)">
+        <div class="topic-left">
+          <div class="topic-image">💻</div>
+          <h3>Input & Output Devices</h3>
+        </div>
+        <div class="dropdown">⌄</div>
+      </div>
+      <div class="topic-content">
+        <p>Learn how information goes in and out of a computer.</p>
+        <ul>
+          <li>Keyboard and mouse</li>
+          <li>Monitor and printer</li>
+          <li>Speakers and microphone</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="topic-card">
+      <div class="topic-header" onclick="toggleTopic(this)">
+        <div class="topic-left">
+          <div class="topic-image">💻</div>
+          <h3>Random Acces Memory(RAM)</h3>
+        </div>
+        <div class="dropdown">⌄</div>
+      </div>
+      <div class="topic-content">
+        <p>Learn how information goes in and out of a computer RAM.</p>
+        <ul>
+          <li>RAM (Random Access Memory) is the part of a computer that temporarily stores the data and programs the computer is 
+
+            actively using. When you open an app, a file, or a website, the computer loads it into RAM so the processor can access it quickly. RAM is very fast compared to storage like a hard drive or SSD, but it is temporary, meaning all data in RAM is cleared when the computer is turned off. Having more RAM allows a computer to run more programs at the same time smoothly, while low RAM can cause slow performance and freezing. In simple terms, RAM is like a work table—the bigger the table, the more tasks you can handle at once.</li>
+          
+        </ul>
+      </div>
+    </div>
+    
+    <div class="topic-card">
+      <div class="topic-header" onclick="toggleTopic(this)">
+        <div class="topic-left">
+          <div class="topic-image">💻</div>
+          <h3>Read only Memory (ROM)</h3>
+        </div>
+        <div class="dropdown">⌄</div>
+      </div>
+      <div class="topic-content">
+        <p>Learn how information goes thriugh the ROM.</p>
+        <ul>
+          <li>ROM (Read-Only Memory) is a type of computer memory that permanently stores important instructions needed for a computer to start and operate properly. Unlike RAM, ROM is non-volatile, meaning it keeps its data even when the computer is turned off. ROM contains essential 
+
+            programs such as the boot instructions that tell the computer how to start up and load the operating system. The data in ROM is usually written by the manufacturer and cannot be easily changed by the user. In simple terms, ROM is like a permanent instruction book that the computer reads every time it is powered on.
+            </li>
+         
+        </ul>
+      </div>
+    </div>
+    
+    <div class="topic-card">
+      <div class="topic-header" onclick="toggleTopic(this)">
+        <div class="topic-left">
+          <div class="topic-image">💻</div>
+          <h3>Hard Disks</h3>
+        </div>
+        <div class="dropdown">⌄</div>
+      </div>
+      <div class="topic-content">
+        <p>Learn about hard disks.</p>
+        <ul>
+          <p><li><h3>Hard Disk Drives (HDDs)</h3></li>
+            A Hard Disk Drive (HDD) is a traditional storage device that stores data magnetically on spinning disks called platters. When you save files, the read/write head moves over these platters to access or record data. HDDs are known for offering large storage capacity at a lower cost, but they are slower than SSDs because they rely on moving mechanical parts. They are ideal for storing big files 
+
+            like videos, photos, and backups.</p>
+          <p><li><h3>Solid State Drives (SSDs)</h3></li>
+            A Solid State Drive (SSD) is a modern storage device that stores data on flash memory chips, similar to USB drives, with no moving parts. This makes SSDs faster, more durable, and quieter than HDDs. They drastically reduce boot times and make programs run quicker. The main downside is that SSDs are usually more expensive per GB than HDDs, but their speed advantage makes them the preferred choice for modern computers.
+
+          </p>
+          
+        </ul>
+      </div>
+    </div>
+    
+    <div class="topic-card">
+      <div class="topic-header" onclick="toggleTopic(this)">
+        <div class="topic-left">
+          <div class="topic-image">💻</div>
+          <h3>Biometrics</h3>
+        </div>
+        <div class="dropdown">⌄</div>
+      </div>
+      <div class="topic-content">
+        <p>Learn how information goes in and out of a computer.</p>
+        <ul>
+          <li>Keyboard and mouse</li>
+          <li>Monitor and printer</li>
+          <li>Speakers and microphone</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="topic-card">
+      <div class="topic-header" onclick="toggleTopic(this)">
+        <div class="topic-left">
+          <div class="topic-image">💻</div>
+          <h3>Input & Output Devices</h3>
+        </div>
+        <div class="dropdown">⌄</div>
+      </div>
+      <div class="topic-content">
+        <p>Learn how information goes in and out of a computer.</p>
+        <ul>
+          <li>Keyboard and mouse</li>
+          <li>Monitor and printer</li>
+          <li>Speakers and microphone</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="topic-card">
+      <div class="topic-header" onclick="toggleTopic(this)">
+        <div class="topic-left">
+          <div class="topic-image">💻</div>
+          <h3>Input & Output Devices</h3>
+        </div>
+        <div class="dropdown">⌄</div>
+      </div>
+      <div class="topic-content">
+        <p>Learn how information goes in and out of a computer.</p>
+        <ul>
+          <li>Keyboard and mouse</li>
+          <li>Monitor and printer</li>
+          <li>Speakers and microphone</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="topic-card">
+      <div class="topic-header" onclick="toggleTopic(this)">
+        <div class="topic-left">
+          <div class="topic-image">💻</div>
+          <h3>Input & Output Devices</h3>
+        </div>
+        <div class="dropdown">⌄</div>
+      </div>
+      <div class="topic-content">
+        <p>Learn how information goes in and out of a computer.</p>
+        <ul>
+          <li>Keyboard and mouse</li>
+          <li>Monitor and printer</li>
+          <li>Speakers and microphone</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="topic-card">
+      <div class="topic-header" onclick="toggleTopic(this)">
+        <div class="topic-left">
+          <div class="topic-image">💻</div>
+          <h3>Input & Output Devices</h3>
+        </div>
+        <div class="dropdown">⌄</div>
+      </div>
+      <div class="topic-content">
+        <p>Learn how information goes in and out of a computer.</p>
+        <ul>
+          <li>Keyboard and mouse</li>
+          <li>Monitor and printer</li>
+          <li>Speakers and microphone</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="topic-card">
+      <div class="topic-header" onclick="toggleTopic(this)">
+        <div class="topic-left">
+          <div class="topic-image">💻</div>
+          <h3>Input & Output Devices</h3>
+        </div>
+        <div class="dropdown">⌄</div>
+      </div>
+      <div class="topic-content">
+        <p>Learn how information goes in and out of a computer.</p>
+        <ul>
+          <li>Keyboard and mouse</li>
+          <li>Monitor and printer</li>
+          <li>Speakers and microphone</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="topic-card">
+      <div class="topic-header" onclick="toggleTopic(this)">
+        <div class="topic-left">
+          <div class="topic-image">💻</div>
+          <h3>Input & Output Devices</h3>
+        </div>
+        <div class="dropdown">⌄</div>
+      </div>
+      <div class="topic-content">
+        <p>Learn how information goes in and out of a computer.</p>
+        <ul>
+          <li>Keyboard and mouse</li>
+          <li>Monitor and printer</li>
+          <li>Speakers and microphone</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="topic-card">
+      <div class="topic-header" onclick="toggleTopic(this)">
+        <div class="topic-left">
+          <div class="topic-image">💻</div>
+          <h3>Input & Output Devices</h3>
+        </div>
+        <div class="dropdown">⌄</div>
+      </div>
+      <div class="topic-content">
+        <p>Learn how information goes in and out of a computer.</p>
+        <ul>
+          <li>Keyboard and mouse</li>
+          <li>Monitor and printer</li>
+          <li>Speakers and microphone</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="topic-card">
+      <div class="topic-header" onclick="toggleTopic(this)">
+        <div class="topic-left">
+          <div class="topic-image">💻</div>
+          <h3>Input & Output Devices</h3>
+        </div>
+        <div class="dropdown">⌄</div>
+      </div>
+      <div class="topic-content">
+        <p>Learn how information goes in and out of a computer.</p>
+        <ul>
+          <li>Keyboard and mouse</li>
+          <li>Monitor and printer</li>
+          <li>Speakers and microphone</li>
+        </ul>
+      </div>
+    </div>
+    
+
+    <div class="topic-card">
+      <div class="topic-header" onclick="toggleTopic(this)">
+        <div class="topic-left">
+          <div class="topic-image">🌐</div>
+          <h3>Internet Basics</h3>
+        </div>
+        <div class="dropdown">⌄</div>
+      </div>
+      <div class="topic-content">
+        <p>Understand how the internet and websites work.</p>
+        <ul>
+          <li>What is the internet?</li>
+          <li>Web browsers</li>
+          <li>Online safety</li>
+        </ul>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h4>Computer Basics</h4>
+        <p>Simple computer education for beginners.</p>
+      </div>
+
+      <div>
+        <h4>Guide</h4>
+        <p>Click a topic → Read → Practice → Improve</p>
+      </div>
+
+      <div>
+        <h4>Vision</h4>
+        <p>Making computer knowledge easy and accessible.</p>
+      </div>
+
+      <div class="copyright">
+        © 2025 Computer Basics
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    function toggleTopic(header) {
+      header.parentElement.classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | Computer Basics</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", system-ui, Arial, sans-serif;
+    }
+
+    body {
+      background: #ffffff;
+      color: #1f2933;
+    }
+
+    /* ===== NAVBAR (ONE LINE ALWAYS) ===== */
+    nav {
+      background: #0f0e0e;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    nav::-webkit-scrollbar {
+      display: none;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 800;
+      color: #2563eb;
+      flex-shrink: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #e2e9ef;
+      font-size: 14px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      transition: 0.25s;
+      flex-shrink: 0;
+    }
+
+    nav a:hover {
+      background: #2563eb;
+      color: #ffffff;
+    }
+
+    /* ===== PAGE ===== */
+    .container {
+      max-width: 950px;
+      margin: auto;
+      padding: 50px 18px 70px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+    }
+
+    /* ===== HERO PROFILE ===== */
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .photo {
+      width: 190px;
+      height: 190px;
+      border-radius: 20px;
+      background-image: url(youngdaniel.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #e7eaef;
+      font-size: 14px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+      flex-shrink: 0;
+    }
+
+    .profile h1 {
+      font-size: 36px;
+      margin-bottom: 8px;
+    }
+
+    .profile p {
+      color: #4b5563;
+      max-width: 520px;
+    }
+
+    /* ===== CARD SECTIONS ===== */
+    .card {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 26px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.07);
+      border: 1px solid #eef2f7;
+    }
+
+    .card h2 {
+      color: #2563eb;
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    .card p {
+      font-size: 15px;
+      color: #374151;
+      margin-bottom: 6px;
+    }
+
+    /* ===== LINKS & ICONS ===== */
+    .icon-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .icon-links a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      padding: 10px 14px;
+      border-radius: 10px;
+      background: #f1f5f9;
+      color: #1f2933;
+      font-size: 14px;
+      transition: 0.25s;
+    }
+
+    .icon-links a:hover {
+      background: #2563eb;
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    .icon {
+      font-size: 18px;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: linear-gradient(135deg, #f8fafc, #eef2ff);
+      padding: 40px 18px;
+      text-align: center;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    footer p {
+      font-size: 14px;
+      color: #374151;
+      margin-bottom: 6px;
+    }
+
+    footer strong {
+      color: #2563eb;
+    }
+
+    /* ===== MOBILE TUNING ===== */
+    @media (max-width: 600px) {
+      .profile {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .profile h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR (ONE LINE) -->
+  <nav>
+    <div class="logo">Computer Basics</div>
+    <a href="homepage.html">Home</a>
+    <a href="topics.html">Topics</a>
+    <a href="about.html">About</a>
+    <a href="story.html">Story</a>
+    
+  </nav>
+
+  <main class="container">
+
+    <!-- PROFILE -->
+    <section class="profile">
+      <div class="photo">📷 owner's photo</div>
+      <div>
+        <h1>Daniel Mutyaba</h1>
+        <p>
+          A passionate young creator 😎dedicated to making computer
+          education simple, friendly, and accessible to everyone interested.
+        </p>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="card">
+      <h2>About the Creator</h2>
+      <p>
+        This platform was created to help beginners understand computers
+        without fear or confusion input by the arrogant small minded people without helpful knowlege about computer.
+        NOTE,
+               <p><ul>1.Every computer wizard was once a beginner who neva even knew what the fn button does on a keyboard.</ul></p>
+               <p><ul>2.Computers were built to solve problems a normal human being feels lazy to sit down and give time</ul></p>
+               <p><ul>3."Your computer is that one slave that will always follow your finger movement without judgment" says Mr.Mutyaba😁</ul></p>
+        
+      </p>
+      <p>
+        The goal is simple: teach clearly, step by step, using language
+        anyone can understand.
+      </p>
+    </section>
+
+    <!-- WHY -->
+    <section class="card">
+      <h2>Why This Website Exists</h2>
+      <p>
+        Many people want to learn computers but don’t know where to start.
+      </p>
+      <p>
+        This site removes complexity and replaces it with clarity,
+        confidence, and growth. though th econtent will be very new to some eyes buy as time goes on it will no longer be new to your eyes anymore.
+      </p>
+    </section>
+
+    <!-- SOCIALS -->
+    <section class="card">
+      <h2>Socials & Contact</h2>
+      <div class="icon-links">
+        <a href="https://www.instagram.com/mr.mutyaba_207?igsh=MXEwZXlyemV4cDgzMQ=="><span class="icon">📸</span>Instagram</a>
+        <a href="https://www.tiktok.com/@sirmicheal207?_r=1&_t=ZM-92IuRR8lSgq"><span class="icon">🐦</span>tiktok</a>
+        <a href="mutyabadanil@gmail.com"><span class="icon">✉️</span>Email</a>
+        <a href="tel:+256705107207"><span class="icon">📞</span>Phone</a>
+      </div>
+    </section>
+
+
+    <!-- EXTERNAL -->
+    <section class="card">
+      <h2>Helpful Learning Websites</h2>
+      <div class="icon-links">
+        <a href="https://www.wikipedia.org" target="_blank"><span class="icon">🌍</span>Wikipedia</a>
+        <a href="https://www.khanacademy.org" target="_blank"><span class="icon">🎓</span>Khan Academy</a>
+        <a href="www.freecodecamp.com" target="_blank"><span class="icon">🧠</span>coding website</a>
+        <a href="https://www.youtube.com" target="_blank"><span class="icon">▶️</span>YouTube</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p><strong>Thank you for visiting.</strong></p>
+    <p>hope you have learnt something new from this website. More websites from Mr.Mutyaba are to be released soon.</p>
+    <p>© 2025 Computer Basic knowlege </p>
+  </footer>
+
+</body>
+</html>

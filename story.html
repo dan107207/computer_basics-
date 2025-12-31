@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Short Story | Computer Basics</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", system-ui, Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      color: #e5e7eb;
+      background:
+        linear-gradient(180deg, rgba(2,6,23,0.95), rgba(2,6,23,0.98)),
+        repeating-linear-gradient(
+          90deg,
+          rgba(37,99,235,0.08) 0px,
+          rgba(37,99,235,0.08) 1px,
+          transparent 1px,
+          transparent 40px
+        ),
+        repeating-linear-gradient(
+          0deg,
+          rgba(37,99,235,0.08) 0px,
+          rgba(37,99,235,0.08) 1px,
+          transparent 1px,
+          transparent 40px
+        );
+      background-blend-mode: overlay;
+    }
+
+    /* ===== NAVBAR (ONE LINE) ===== */
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 16px;
+      background: rgba(2,6,23,0.85);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    nav::-webkit-scrollbar {
+      display: none;
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 18px;
+      color: #60a5fa;
+      flex-shrink: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #e5e7eb;
+      font-size: 14px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      transition: 0.25s;
+      flex-shrink: 0;
+    }
+
+    nav a:hover {
+      background: #2563eb;
+      color: #ffffff;
+    }
+
+    /* ===== STORY CONTAINER ===== */
+    .story-wrapper {
+      max-width: 900px;
+      margin: auto;
+      padding: 70px 18px 90px;
+    }
+
+    .story-card {
+      background: rgba(15,23,42,0.92);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow:
+        0 0 0 1px rgba(96,165,250,0.15),
+        0 20px 60px rgba(0,0,0,0.6);
+    }
+
+    .story-title {
+      font-size: 40px;
+      margin-bottom: 12px;
+      color: #93c5fd;
+      text-align: center;
+    }
+
+    .story-subtitle {
+      text-align: center;
+      color: #9ca3af;
+      font-size: 15px;
+      margin-bottom: 35px;
+    }
+
+    .story-content {
+      font-size: 17px;
+      line-height: 1.9;
+      color: #e5e7eb;
+    }
+
+    .story-content p {
+      margin-bottom: 22px;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      padding: 30px 16px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      color: #9ca3af;
+      font-size: 14px;
+    }
+
+    footer strong {
+      color: #60a5fa;
+    }
+
+    /* ===== MOBILE ===== */
+    @media (max-width: 600px) {
+      .story-card {
+        padding: 26px 20px;
+      }
+
+      .story-title {
+        font-size: 28px;
+      }
+
+      .story-content {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">Computer Basics</div>
+    <a href="homepage.html">Home</a>
+    <a href="topics.html">Topics</a>
+    <a href="about.html">About</a>
+    <a href="story.html">Story</a>
+
+  </nav>
+
+  <!-- STORY -->
+  <main class="story-wrapper">
+    <div class="story-card">
+
+      <h1 class="story-title">The Story of a Computer</h1>
+      <p class="story-subtitle">
+        A short, powerful story about curiosity, knowledge, and technology
+      </p>
+
+      <div class="story-content">
+        <p>
+          ✍️ Paste your story here.
+        </p>
+
+        <p>
+          This space is designed for a long, engaging narrative about computers —
+          how they changed lives, how curiosity turned into power, and how learning
+          technology opens doors.
+        </p>
+
+        <p>
+          Write in a way that makes readers feel the glow of the screen,
+          the quiet hum of a machine, and the excitement of understanding
+          something new for the first time.
+        </p>
+
+        <p>
+          This layout keeps readers focused, immersed, and emotionally connected
+          to the story.
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p><strong>Thank you for watching.</strong></p>
+    <p>© 2025 Computer Basics</p>
+  </footer>
+
+</body>
+</html>

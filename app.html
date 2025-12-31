@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Computer Basics</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    body {
+      background: #ffffff;
+      color: #1f2933;
+      line-height: 1.6;
+    }
+
+    /* NAVBAR */
+    nav {
+      background: #ffffff;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav .logo {
+      font-size: 22px;
+      font-weight: 700;
+      color: #2563eb;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #1f2933;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: 0.25s;
+      font-size: 14px;
+    }
+
+    nav ul li a:hover {
+      background: #2563eb;
+      color: #ffffff;
+    }
+
+    /* HERO */
+    .hero {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero-text h1 {
+      font-size: 40px;
+      margin-bottom: 16px;
+    }
+
+    .hero-text p {
+      font-size: 17px;
+      color: #4b5563;
+      margin-bottom: 28px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .hero-buttons button {
+      padding: 12px 24px;
+      font-size: 15px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: #2563eb;
+      color: #ffffff;
+    }
+
+    .btn-secondary {
+      background: #eef2ff;
+      color: #2563eb;
+    }
+
+    .hero-buttons button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    /* IMAGE PLACEHOLDER */
+    .hero-image {
+      width: 100%;
+      min-height: 240px;
+      border-radius: 16px;
+      background: #f3f4f6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #6b7280;
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      font-size: 15px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #f9fafb;
+      padding: 50px 20px;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .footer-container {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+    }
+
+    footer h3 {
+      color: #2563eb;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    footer p {
+      font-size: 14px;
+      color: #4b5563;
+    }
+
+    .copyright {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 13px;
+      color: #6b7280;
+    }
+
+    /* MOBILE OPTIMIZATION */
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 40px 16px;
+      }
+
+      .hero-text h1 {
+        font-size: 30px;
+      }
+
+      .hero-text p {
+        font-size: 16px;
+      }
+
+      .hero-buttons button {
+        width: 100%;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      nav .logo {
+        margin-bottom: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">Computer Basics</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="topics.html">Topics</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="story.html">Short Story</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Learn Computer Skills Without the Stress</h1>
+      <p>
+        A beginner-friendly platform that teaches computers clearly,
+        step by step — perfect on phone or computer.
+      </p>
+
+      <div class="hero-buttons">
+        <button class="btn-primary" onclick="goTo('topics.html')">
+          Explore Topics
+        </button>
+        <button class="btn-secondary" onclick="goTo('about.html')">
+          Why This Site?
+        </button>
+      </div>
+    </div>
+
+    <!-- IMAGE SPACE -->
+    <div class="hero-image">
+      🖼️ Place a computer learning image here<br>
+      (Laptop, keyboard, students, or computer parts)
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div>
+        <h3>Computer Basics</h3>
+        <p>
+          Simple, friendly computer education for everyone —
+          no experience needed.
+        </p>
+      </div>
+
+      <div>
+        <h3>Guide</h3>
+        <p>
+          Pick a topic → Learn → Practice →
+          Build real confidence.
+        </p>
+      </div>
+
+      <div>
+        <h3>Our Vision</h3>
+        <p>
+          Making computer knowledge accessible on
+          both mobile phones and computers.
+        </p>
+      </div>
+    </div>
+
+    <div class="copyright">
+      © 2025 Computer Basics • Mobile & Desktop Ready
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    function goTo(page) {
+      window.location.href = page;
+    }
+  </script>
+
+</body>
+</html>
